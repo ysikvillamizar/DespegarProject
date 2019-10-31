@@ -1,0 +1,41 @@
+package co.com.accenture.certification.despegarproject.stepdefinitions;
+
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class FlightReserveStepDefinition {
+	
+	
+	
+	
+	
+	
+
+	 @Given("^that Actor wants to look for a one way flight $")
+	    public void thatActorWantsToLookForAOneWayFlight() throws Throwable {
+	       	    }
+
+	 @When("^The Actor insert (.+), (.+) , (.+) and (.+)$")
+	    public void theActorInsert  And(String origincity, String destinationcity, String departuredate, String returndate) throws Throwable {
+	        
+	    }
+
+    
+	   @And("^The Actor insert (.+), (.+) , (.+), (.+), (.+) and (.+)$")
+	    public void theActorInsert    And(String name, String lastname, String identificationnumber, String department, String city, String returndate) throws Throwable {
+	       
+	    }
+	
+	   @Then("^The Actor should your data $")
+	    public void theActorShouldYourData() throws Throwable {
+	      
+	    }
+
+   
+	
+	
+	
+
+}

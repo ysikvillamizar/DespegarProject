@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
+<fullyQualifiedTypeName name="cucumber.api.CucumberOptions"/>
+<fullyQualifiedTypeName name="net.serenitybdd.cucumber.CucumberWithSerenity"/>
+<fullyQualifiedTypeName name="cucumber.api.SnippetType"/>
+<fullyQualifiedTypeName name="cucumber.api.java.en.Given"/>
+<fullyQualifiedTypeName name="cucumber.api.java.en.Then"/>
+<fullyQualifiedTypeName name="net.serenitybdd.core.pages.PageObject"/>
+<fullyQualifiedTypeName name="net.thucydides.core.annotations.Managed"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+<fullyQualifiedTypeName name="cucumber.api.java.Before"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.actors.OnStage"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.actors.OnlineCast"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.abilities.BrowseTheWeb"/>
+<fullyQualifiedTypeName name="cucumber.api.java.en.When"/>
+<fullyQualifiedTypeName name="com.mysql.cj.x.protobuf.MysqlxExpect.Open"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.Performable"/>
+<fullyQualifiedTypeName name="net.serenitybdd.core.steps.Instrumented"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.actions.Open"/>
+<fullyQualifiedTypeName name="co.com.accenture.certification.despegarproject.tasks.Navigate"/>
+<fullyQualifiedTypeName name="co.com.accenture.certification.despegarproject.userinterfaces.OptionPage"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="co.com.accenture.certification.despegarproject.tasks.InsertFlightData"/>
+<fullyQualifiedTypeName name="co.com.accenture.certification.despegarproject.tasks.SetAsideFlight"/>
+<fullyQualifiedTypeName name="co.com.accenture.certification.despegarproject.userinterfaces.Flight"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.Task"/>
+<fullyQualifiedTypeName name="co.com.accenture.certification.despegarproject.tasks.FillInData"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.actions.Scroll"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.Actor"/>
+<fullyQualifiedTypeName name="org.apache.tools.ant.taskdefs.WaitFor"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.waits.WaitUntil"/>
+<fullyQualifiedTypeName name="cucumber.api.java.en.And"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.matchers.statematchers.IsVisibleMatcher"/>
+<fullyQualifiedTypeName name="co.com.accenture.certification.despegarproject.interactions.WaitSeconds"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="net.serenitybdd.screenplay.Question"/>
+<fullyQualifiedTypeName name="co.com.accenture.certification.despegarproject.userinterfaces.SelectTheRate"/>
+<fullyQualifiedTypeName name="co.com.accenture.certification.despegarproject.questions.CompareTheValues"/>
+<fullyQualifiedTypeName name="co.com.accenture.certification.despegarproject.userinterfaces.Values"/>
+</qualifiedTypeNameHistroy>

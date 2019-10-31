@@ -1,0 +1,23 @@
+package co.com.accenture.certification.despegarproject.questions;
+
+
+import co.com.accenture.certification.despegarproject.userinterfaces.Values;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Question;
+
+import net.serenitybdd.screenplay.questions.Text;
+
+public class CompareTheValues implements Question<Boolean>{
+
+	@Override
+	public Boolean answeredBy(Actor actor) {
+		if( (Text.of(Values.NAME_TEXT).viewedBy(actor).asString().contains("jessica"))&& (Text.of(Values.NAME_TEXT).viewedBy(actor).asString().contains("villamizar"))){
+			return true;
+			}else {
+				return false;
+			}
+		
+	}
+	
+
+}

@@ -1,0 +1,23 @@
+#Author: ysikvillamizar@gmail.com
+
+@tag
+Feature: Flight reserve
+As a web user
+To do test using the programming Cucumber and Gherkin.
+
+ @tag2
+  Scenario Outline: Successful search for a flight from the main Despegar website
+    Given that Actor wants to look for a one way flight 
+    When The Actor insert the <originCity>, <destinationCity> , <departure date> and <return date>
+    And The Actor insert <name>, <lastName> , <identificationNumber>, <department>, <city> and <return date>
+    Then The Actor should your data verify
+
+    Examples: 
+   
+  	|originCity|destinationCity|departure date|return date|   name   |  lastName    | identificationNumber | department |  city    |   adress       |
+    
+    |Medellin  |		Bogota  	 |			1      |			8     |  Jessica |	Villamizar  |			1128438401       |	Antioquia | Medellin |cr 51 B N 70 -23|
+    
+    Examples:
+    
+   

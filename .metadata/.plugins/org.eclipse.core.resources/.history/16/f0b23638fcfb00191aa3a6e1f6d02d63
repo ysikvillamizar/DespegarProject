@@ -1,0 +1,34 @@
+package co.com.accenture.certification.despegarproject.questions;
+import co.com.accenture.certification.despegarproject.userinterfaces.Values;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Question;
+import net.serenitybdd.screenplay.questions.Text;
+
+public class CompareTheValues implements Question<Boolean>{
+
+	@Override
+	public Boolean answeredBy(Actor actor) {
+		String name=Text.of(Values.NAME_TEXT).viewedBy(actor).asString();
+		String lastName=Text.of(Values.LASTNAME_TEXT).viewedBy(actor).asString();
+		
+		if( (name.contains("jessica"))&& (lastName.contains("villamizar"))){
+			return true;
+			}else {
+				return false;
+			}
+		
+	}
+	
+	/*
+	 * String state=Text.of(StateHotel.TITLE_STATE).viewedBy(actor).asString();
+		
+		return (state.contains("Excelente ")||		
+	        	state.contains("Muy bueno ") ||
+	        	state.contains("Bueno "));
+	 */
+	
+	public static Question<Boolean> data(){
+		return new CompareTheValues();
+	}
+
+}

@@ -1,0 +1,63 @@
+package co.com.accenture.certification.despegarproject.stepdefinitions;
+
+import org.openqa.selenium.WebDriver;
+
+import co.com.accenture.certification.despegarproject.tasks.InsertFlightData;
+import co.com.accenture.certification.despegarproject.tasks.Navigate;
+import co.com.accenture.certification.despegarproject.userinterfaces.OptionPage;
+import cucumber.api.java.Before;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
+import net.serenitybdd.screenplay.actors.OnStage;
+import net.serenitybdd.screenplay.actors.OnlineCast;
+import net.thucydides.core.annotations.Managed;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+
+public class FlightReserveStepDefinition extends PageObject{
+	
+	
+	 @Managed(driver = "chrome")
+	    private WebDriver herBrowser = null;
+
+
+	    @Before
+	    public void setUp() {
+	        OnStage.setTheStage(new OnlineCast());
+	        OnStage.theActorCalled("Jessica").can(
+	                BrowseTheWeb.with(herBrowser));
+	    }
+	
+	
+	    
+
+
+	    @Given("^that Actor wants to look for a one way flight$")
+	    public void thatActorWantsToLookForAOneWayFlight() throws Exception {
+	    	theActorInTheSpotlight().wasAbleTo(Navigate.in(OptionPage.Despegar));
+	    }
+	    
+	    @When("^The Actor insert \"([^\"]*)\", \"([^\"]*)\" , \"([^\"]*)\" and \"([^\"]*)\" of the fight$")
+	    public void theActorInsertAndOfTheFight(String originCity, String destinationCity, String departureDate, String returnDate) throws Exception {
+	    	theActorInTheSpotlight().attemptsTo(InsertFlightData.withTheInformations(originCity, destinationCity, departureDate, returnDate));
+	        
+	    }
+
+	    @And("^The Actor insert \"([^\"]*)\", \"([^\"]*)\" , \"([^\"]*)\", \"([^\"]*)\", \"([^\"]*)\" and \"([^\"]*)\"$")
+	    public void theActorInsertAnd(String arg1, String arg2, String arg3, String arg4, String arg5, String arg6) throws Exception {
+	        
+	    }
+
+	    @Then("^The Actor should your data$")
+	    public void theActorShouldYourData() throws Exception {
+	        
+	    }
+   
+	
+	
+	
+
+}

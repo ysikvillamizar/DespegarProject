@@ -1,0 +1,43 @@
+package co.com.accenture.certification.despegarproject.userinterfaces;
+
+import org.openqa.selenium.By;
+
+import net.serenitybdd.core.pages.PageObject;
+import net.serenitybdd.screenplay.targets.Target;
+
+public class SelectTheRate extends PageObject {
+	public static final Target PAY_WITH_PSE = Target.the("Select pay with PSE").locatedBy("//*[@for='payment-method-5']");
+			//.locatedBy("(//*[@class='payment-method-aligned radio-circle'])[3]");
+	public static final Target NAME = Target.the("Select the name").locatedBy("//*[@id=\"invoice-first-name-0\"]");
+			//.locatedBy("//*[@class='input-tag invoice-first-name ng-touched ng-dirty ng-valid']");
+	//input-tag traveler-first-name ng-untouched ng-pristine ng-invalid		
+	//.locatedBy("(//*[@id='invoice-first-name-0'])[2]");
+			//.locatedBy("//*[@class='input-tag traveler-first-name ng-untouched ng-pristine ng-invalid']");
+	public static final Target LASTNAME = Target.the("Select the last name").locatedBy("//*[@id=\"invoice-last-name-0\"]");
+			//.locatedBy("//*[@class='input-tag invoice-last-name ng-dirty ng-valid ng-touched']");
+			//.locatedBy("(//*[@id='invoice-last-name-0'])[2]");
+			//.locatedBy("//*[@class='input-tag traveler-last-name ng-untouched ng-pristine ng-invalid']");
+	public static final Target ID= Target.the("Select the id").locatedBy("//*[@id=\"invoice-fiscal-identification-number-0\"]");
+			//.locatedBy("//*[@class='input-tag invoice-fiscal-identification-number ng-touched ng-dirty ng-valid']");
+			//.locatedBy("(//*[@id='invoice-fiscal-identification-number-0'])[2]");
+			//.locatedBy("//*[@class='input-tag traveler-identification-number ng-untouched ng-pristine ng-invalid']");
+	public static final Target DEPARTMENT= Target.the("Choose the department").locatedBy("//*[@id=\"invoice-fiscal-address-state-0\"]");
+			//.locatedBy("(//*[@id='invoice-fiscal-address-state-0'])[2]");
+	public static final Target CHOOSE_DEPARTMENT= Target.the("Select department").locatedBy("//*[@id=\"invoice-fiscal-address-state-0\"]/option[2]");
+			//.locatedBy("//*[@id=\"invoice-fiscal-address-city-CASH_TRANSFER_BOG-0\"]");
+			//.locatedBy("(//*[@value='30169'])[1]");
+	public static final Target CITY= Target.the("Select the resident country").locatedBy("//*[@id=\"invoice-fiscal-address-city-CASH_TRANSFER_BOG-0\"]");
+			//.locatedBy("(//*[@class='invoice-fiscal-address-city-CASH_TRANSFER_BOG-0'])[2]");
+	public static final Target CHOOSE_CITY= Target.the("Select the city").locatedBy("//*[@id='ui-id-2']");
+	public static final Target ADRESS= Target.the("Insert the resident adress").locatedBy("(//*[@id='fljyu7kih2eweh35rz06sn'])[2]");
+	
+	public static final Target NAME_FOR_TRAVEL= Target.the("Enter the value of the name").locatedBy("(//*[@id='6qollr448ubiwizol5bkvo'])[2]");
+	public static final Target LASTNAME_FOR_TRAVEL=Target.the("Enter the value of the lastname").locatedBy("(//*[@id='pcbne4ptk2hv0wl6rudiu'])[2]");
+	public static final Target ID_FOR_TRAVEL=Target.the("Enter the value of the id").locatedBy("//*[@id='traveler-identification-number-0']");
+	
+	
+	public static final Target DATE_MONTH= Target.the("select month born").locatedBy("//div[@class='eva-3-select -md eva-3-validation -top-left']//div[@class='select-container']//div[@class='ms-bottom mm-bottom']//select[@class='select-tag traveler-birthday-month ng-untouched ng-pristine ng-invalid']//option[@value='6'][contains(text(),'6')]");
+	public static final Target DATE_YEAR=Target.the("select yeart born").locatedBy("//div[@class='eva-3-select -md eva-3-validation -top-left']//div[@class='select-container']//div[@class='ms-bottom mm-bottom']//select[@class='select-tag traveler-birthday-year ng-untouched ng-pristine ng-invalid']//option[@value='1991'][contains(text(),'1991')]");
+	public static final Target FEMALE= Target.the("select genre").locatedBy("//*[@class='chk-radio-label radio-label eva-3-p']");
+	public static final Target TITLE=Target.the("title").locatedBy("//*[@class='eva-3-h4 form-title']");
+}

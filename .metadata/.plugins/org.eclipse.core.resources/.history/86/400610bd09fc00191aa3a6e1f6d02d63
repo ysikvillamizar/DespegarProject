@@ -1,0 +1,50 @@
+package co.com.accenture.certification.despegarproject.questions;
+import co.com.accenture.certification.despegarproject.userinterfaces.Values;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Question;
+import net.serenitybdd.screenplay.questions.Text;
+
+public class CompareTheValues implements Question<String>{
+
+	String name;
+	String lastName;
+	
+	
+	public CompareTheValues(String name, String lastName) {
+		this.name = name;
+		this.lastName = lastName;
+	}
+
+
+	@Override
+	public String answeredBy(Actor actor) {
+		String passengerName=Text.of(Values.NAME_TEXT).viewedBy(actor).asString();
+		String passengerLastName=Text.of(Values.LASTNAME_TEXT).viewedBy(actor).asString();
+		
+		return ((passengerName.equals(name)) && (passengerLastName.equals(lastName));
+			
+		
+	}
+	//text.of(target inferior).viewByactor(actor).asString().equalsIgnoreCase(dato_feature)
+	
+	public static Question<String> OfTheForm(String name, String lastName){
+		return new CompareTheValues(name, lastName);
+	}
+	
+	/*
+	 * @Then("^validate the title (.*) on website$")
+	    public void validateTheTitleIngresaUnDestinoOnWebsite(String error) throws Throwable {
+	    	jessica.should(seeThat(ErrorText.ofFollowingTarget(ErrorMessage.ERROR_CITY), containsString(error)));
+	    }
+	    
+	    
+	     
+	public static ErrorText ofFollowingTarget(Target target) {
+        return new ErrorText(target);
+	 * 
+		return (state.contains("Excelente ")||		
+	        	state.contains("Muy bueno ") ||
+	        	state.contains("Bueno "));
+	 */
+
+}

@@ -1,0 +1,36 @@
+package co.com.accenture.certification.despegarproject.tasks;
+
+import java.util.List;
+
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Task;
+import  static net.serenitybdd.screenplay.Tasks.instrumented;
+
+public class InsertFlightData implements Task{
+	
+	private String originCity;
+	private String destinationCity;
+	private String departureDate;
+	private String returnDate;
+	
+	 
+	
+	
+	
+	public InsertFlightData(String originCity, String destinationCity, String departureDate, String returnDate) {
+		this.originCity = originCity;
+		this.destinationCity = destinationCity;
+		this.departureDate = departureDate;
+		this.returnDate = returnDate;
+	}
+
+	@Override
+	public <T extends Actor> void performAs(T actor) {
+		
+		
+	}
+
+	public static  InsertFlightData withTheInformations(String originCity, String destinationCity, String departureDate, String returnDate){
+        return instrumented( InsertFlightData.class,originCity,  destinationCity,  departureDate,  returnDate);
+    }
+}

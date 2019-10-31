@@ -1,0 +1,57 @@
+package co.com.accenture.certification.despegarproject.tasks;
+
+import static net.serenitybdd.screenplay.Tasks.instrumented;
+
+import co.com.accenture.certification.despegarproject.interactions.WaitSeconds;
+import co.com.accenture.certification.despegarproject.userinterfaces.FlightDespegar;
+import co.com.accenture.certification.despegarproject.userinterfaces.SelectTheRate;
+import net.serenitybdd.screenplay.Actor;
+import net.serenitybdd.screenplay.Task;
+import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.Scroll;
+import net.serenitybdd.screenplay.waits.WaitUntil;
+
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
+
+public class FillInData implements Task{
+
+	private String  name;
+	private String lastName ;
+	private String identificationNumber;
+	private String department;
+	private String city;
+	private String adress;
+	
+	
+	public FillInData(String name, String lastName, String identificationNumber, String department, String city,
+			String adress) {
+	
+		this.name = name;
+		this.lastName = lastName;
+		this.identificationNumber = identificationNumber;
+		this.department = department;
+		this.city = city;
+		this.adress = adress;
+	}
+
+
+	@Override
+	public <T extends Actor> void performAs(T actor) {
+	
+		WaitUntil.the(FlightDespegar.TITLE, isVisible());
+		actor.attemptsTo( WaitSeconds.inThePage(10),Scroll.to(FlightDespegar.SELECT),
+				
+			actor.attemptsTo(WaitSeconds.inThePage(10),Scroll.to(SelectTheRate.NAME),
+						Click.on(SelectTheRate.NAME),
+						 Enter.theValue(lastName).into(SelectTheRate.LASTNAME),
+						 Click.on(SelectTheRate.LASTNAME),
+						 Enter.theValue(identificationNumber).into(SelectTheRate.ID),
+						 Click.on(SelectTheRate.COUNTRY));
+										
+	}
+	public static  InsertFlightData withTheInformations(String name, String lastName, String identificationNumber, String department, String city, String adress){
+        return instrumented( InsertFlightData.class, name,  lastName, identificationNumber,  department, city,	 adress);
+    }
+
+}

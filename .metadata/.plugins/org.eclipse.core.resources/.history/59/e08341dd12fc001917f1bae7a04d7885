@@ -1,0 +1,13 @@
+webdriver.driver=chrome
+
+
+serenity.project.name = DespegarProject
+thucydides.driver.capabilities = chrome
+
+webdriver.chrome.driver= chromedriver.exe
+
+serenity.test.root=co.com.accenture.certification.despegarproject.stepdefinitions
+ 
+webdriver.timeouts.implicitlywait = 1000
+
+
